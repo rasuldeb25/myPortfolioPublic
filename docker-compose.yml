@@ -1,0 +1,26 @@
+services:
+  # 🐍 The Backend (Already working)
+  web:
+    build: .
+    container_name: biocore_backend
+    ports:
+      - ":"
+    volumes:
+      - ./backend/biocore.db:/app/biocore.db
+      - ./static/uploads:/app/static/uploads
+    environment:
+      - ALLOWED_ORIGINS=${ALLOWED_ORIGINS:-http://localhost:,http://localhost:}
+      - BASE_URL=${BASE_URL:-http://localhost:}
+    restart: always
+
+  # ⚛️ The Frontend (New!)
+  frontend:
+    build: ./frontend
+    container_name: biocore_frontend
+    ports:
+      - ":"
+    environment:
+      - API_URL=${API_URL:-http://localhost:}
+    depends_on:
+      - web
+    restart: always

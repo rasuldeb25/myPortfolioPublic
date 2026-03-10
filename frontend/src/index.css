@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CRITICAL FIX: Removes default browser "frame" */
+html, body, #root {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Ensure images in prose (blog content) maintain original colors */
+.prose img {
+  filter: none !important;
+}
+
+/* Highlighted text styling */
+.prose mark {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0 4px;
+  border-radius: 2px;
+}
+
+/* Ensure inline spans respect font-size */
+.prose span {
+  font-size: inherit;
+  line-height: inherit;
+}

@@ -1,0 +1,47 @@
+# --- Existing ---
+.venv/
+backend/.venv/
+*.db
+.env
+__pycache__/
+
+# --- ADD THESE ---
+# 1. Coverage Reports (The folders you asked about)
+htmlcov/
+htmlcov_final/
+.coverage
+coverage.xml
+
+# 2. Frontend Junk (Massive folder, never commit this)
+frontend/node_modules/
+node_modules/
+
+# 3. Frontend Build Output (We build this on the server, don't commit it)
+frontend/dist/
+dist/
+
+# 4. System Junk
+.DS_Store
+Thumbs.db
+
+# --- ENVIRONMENT & SECRETS ---
+.env
+.env.*
+*.env.local
+*.env.development
+*.env.production
+*.env.test
+secrets.*
+config.local.*
+*.key
+*.pem
+*.p12
+*.crt
+*.cert
+*.token
+*.credentials
+*.auth
+
+# --- LOGS ---
+logs
+*.log   

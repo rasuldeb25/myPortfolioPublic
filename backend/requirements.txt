@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+python-multipart
+pandas
+matplotlib
+requests
+google-genai
+sqlmodel
+passlib[bcrypt]
+python-jose[cryptography]
+python-dotenv
+pytest
+httpx
+bcrypt==4.0.1

@@ -1,0 +1,29 @@
+# --- SYSTEM FILES ---
+.DS_Store
+Thumbs.db
+
+# --- PYTHON (Backend) ---
+__pycache__/
+*.py[cod]
+*$py.class
+backend/.venv/
+backend/venv/
+backend/env/
+
+# --- DATABASE! ---
+*.db
+*.sqlite3
+backend/biocore.db
+
+# --- UPLOADED IMAGES ---
+backend/static/images/*
+!backend/static/images/.gitkeep
+
+# --- NODE (Frontend) ---
+node_modules/
+frontend/node_modules/
+dist/
+build/
+.env
+.env.local
+.env.*

@@ -1,0 +1,10 @@
+.git
+.venv
+__pycache__
+htmlcov
+htmlcov_final
+backend/tests
+*.pyc
+*.pyo
+env
+.env
