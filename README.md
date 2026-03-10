@@ -68,6 +68,7 @@ graph TD
     style Frontend fill:#f3e8ff,stroke:#9333ea,stroke-width:2px
     style DB fill:#fef08a,stroke:#ca8a04,stroke-width:2px
     style Volume fill:#ffedd5,stroke:#ea580c,stroke-width:2px
+
 ```
 
 ### XVG Processing Data Flow
