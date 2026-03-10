@@ -52,14 +52,14 @@ The platform employs a robust microservices architecture orchestrated via Docker
 ### System Architecture
 ```mermaid
 graph TD
-    User([🌐 User / Browser]) -->|HTTPS / WSS| Nginx[🔒 Nginx Reverse Proxy]
+    User([User / Browser]) -->|HTTPS / WSS| Nginx[Nginx Reverse Proxy]
     
     subgraph "Containerized Microservices"
-        Nginx -->|/api/*| Backend[⚙️ FastAPI Backend]
-        Nginx -->|/*| Frontend[⚛️ React Client]
+        Nginx -->|/api/*| Backend[FastAPI Backend]
+        Nginx -->|/*| Frontend[React Client]
         
-        Backend -->|Read / Write| DB[(🗄️ Persistent DB Storage)]
-        Backend -->|Stream / Process| Volume[📁 Data Volume (Uploads)]
+        Backend -->|Read / Write| DB[(Persistent DB Storage)]
+        Backend -->|Stream / Process| Volume[Data Volume (Uploads)]
     end
     
     style User fill:#f9f9f9,stroke:#333,stroke-width:2px
