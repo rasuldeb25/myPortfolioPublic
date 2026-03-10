@@ -50,8 +50,14 @@ This system highlights a dual expertise in web development and scientific comput
 The platform employs a robust microservices architecture orchestrated via Docker. This guarantees deep isolation, heightened security, and scalable infrastructure.
 
 ### System Architecture
-```mermaid
-graph TD
+```graph TD
+    style User fill:#f9f9f9,stroke:#333,stroke-width:2px
+    style Nginx fill:#e0f2fe,stroke:#0284c7,stroke-width:2px
+    style Backend fill:#dcfce7,stroke:#16a34a,stroke-width:2px
+    style Frontend fill:#f3e8ff,stroke:#9333ea,stroke-width:2px
+    style DB fill:#fef08a,stroke:#ca8a04,stroke-width:2px
+    style Volume fill:#ffedd5,stroke:#ea580c,stroke-width:2px
+
     User([User / Browser]) -->|HTTPS / WSS| Nginx[Nginx Reverse Proxy]
     
     subgraph "Containerized Microservices"
@@ -61,14 +67,6 @@ graph TD
         Backend -->|Read / Write| DB[(Persistent DB Storage)]
         Backend -->|Stream / Process| Volume[Data Volume (Uploads)]
     end
-    
-    style User fill:#f9f9f9,stroke:#333,stroke-width:2px
-    style Nginx fill:#e0f2fe,stroke:#0284c7,stroke-width:2px
-    style Backend fill:#dcfce7,stroke:#16a34a,stroke-width:2px
-    style Frontend fill:#f3e8ff,stroke:#9333ea,stroke-width:2px
-    style DB fill:#fef08a,stroke:#ca8a04,stroke-width:2px
-    style Volume fill:#ffedd5,stroke:#ea580c,stroke-width:2px
-
 ```
 
 ### XVG Processing Data Flow
